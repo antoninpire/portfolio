@@ -1,0 +1,25 @@
+---
+import IconButton from "./IconButton.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
+import PhoneIcon from "./icons/PhoneIcon.astro";
+---
+
+<div class="mt-6 flex">
+  <IconButton title="Email me" to="mailto:me@antonin.dev">
+    <MailIcon />
+  </IconButton>
+  <IconButton title="Call me" to="tel:+33780019744">
+    <PhoneIcon />
+  </IconButton>
+  <IconButton title="Github" to="https://github.com/antoninpire">
+    <GithubIcon size={18} />
+  </IconButton>
+  <IconButton
+    title="Linkedin"
+    to="https://www.linkedin.com/in/antonin-pire-7a5259155/"
+  >
+    <LinkedinIcon />
+  </IconButton>
+</div>

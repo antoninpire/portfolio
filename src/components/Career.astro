@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import tchekerLogo from "../assets/tcheker_logo.svg";
+import works from "../data/works.json";
+import CareerCard from "./CareerCard.astro";
+---
+
+<div class="mt-10">
+  <h3 class="text-sm text-neutral-400 mb-2">career</h3>
+  {
+    works.map((work, index) => (
+      <CareerCard work={work} separator={index !== works.length - 1}>
+        <Image src={tchekerLogo} slot="logo" alt={"Logo " + work.company} />
+      </CareerCard>
+    ))
+  }
+</div>

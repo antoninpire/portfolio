@@ -1,0 +1,90 @@
+[
+  {
+    "label": "frameworks i love",
+    "technologies": [
+      {
+        "name": "NextJS",
+        "url": "https://nextjs.org/"
+      },
+      {
+        "name": "Typescript",
+        "url": "https://www.typescriptlang.org/"
+      },
+      {
+        "name": "React",
+        "url": "https://react.dev/"
+      },
+      {
+        "name": "React Native",
+        "url": "https://reactnative.dev/"
+      },
+      {
+        "name": "SvelteKit",
+        "url": "https://kit.svelte.dev/"
+      },
+      {
+        "name": "NestJS",
+        "url": "https://nestjs.com/"
+      },
+      {
+        "name": "Fastify",
+        "url": "https://fastify.dev/"
+      },
+      {
+        "name": "Nuxt",
+        "url": "https://nuxt.com/"
+      },
+      {
+        "name": "Astro",
+        "url": "https://astro.build/"
+      }
+    ]
+  },
+  {
+    "label": "tools i enjoy",
+    "technologies": [
+      {
+        "name": "TRPC",
+        "url": "https://trpc.io/"
+      },
+      {
+        "name": "Drizzle",
+        "url": "https://orm.drizzle.team/"
+      },
+      {
+        "name": "Prisma",
+        "url": "https://www.prisma.io/"
+      },
+      {
+        "name": "Tailwind",
+        "url": "https://tailwindcss.com/"
+      },
+      {
+        "name": "Planetscale",
+        "url": "https://planetscale.com/"
+      },
+      {
+        "name": "Turso",
+        "url": "https://turso.tech/"
+      },
+      {
+        "name": "Elysia",
+        "url": "https://elysiajs.com/"
+      },
+      {
+        "name": "Lucia",
+        "url": "https://lucia-auth.com/"
+      }
+    ]
+  },
+  {
+    "label": "things i'm learning",
+    "technologies": [
+      {
+        "name": "Golang",
+        "url": "https://go.dev/"
+      },
+      { "name": "Fiber", "url": "https://gofiber.io/" }
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+---
+interface Props {
+  label: string;
+  technologies: { name: string; url: string }[];
+  separator: boolean;
+}
+---
+
+<div class="flex gap-x-4 px-4 ml-8 pt-4">
+  <div
+    class:list={[
+      "flex flex-col text-sm pb-2 text-neutral-700 dark:text-neutral-300 w-full",
+      {
+        "border-b border-b-neutral-100 dark:border-b-neutral-900":
+          Astro.props.separator,
+      },
+    ]}
+  >
+    <p>{Astro.props.label}</p>
+    <div class="flex items-center flex-wrap mt-2">
+      {
+        Astro.props.technologies.map((technology, index) => (
+          <>
+            <a
+              title={technology.name}
+              href={technology.url}
+              class="text-sm text-neutral-500 border-b-neutral-500 border-b"
+            >
+              {technology.name}
+            </a>
+            {index !== Astro.props.technologies.length - 1 ? (
+              <p class="text-sm text-neutral-500 mr-2">,</p>
+            ) : null}
+          </>
+        ))
+      }
+    </div>
+  </div>
+</div>

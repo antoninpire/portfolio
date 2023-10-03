@@ -1,0 +1,35 @@
+---
+interface Props {
+  work: {
+    company: string;
+    role: string;
+    period: string;
+  };
+  separator: boolean;
+}
+---
+
+<div class="flex gap-x-4 px-4 -ml-4 pt-4">
+  <div
+    class="w-9 h-9 rounded-[10px] mt-[2px] shadow flex justify-center items-center"
+  >
+    <slot name="logo" />
+  </div>
+  <div
+    class:list={[
+      "flex flex-col text-sm pb-4 text-neutral-700 dark:text-neutral-300 w-full",
+      {
+        "border-b border-b-neutral-100 dark:border-b-neutral-900":
+          Astro.props.separator,
+      },
+    ]}
+  >
+    <p>{Astro.props.work.company}</p>
+    <div class="flex items-center justify-between">
+      <p class="text-neutral-500">{Astro.props.work.role}</p>
+      <p class="text-neutral-400 dark:text-neutral-500 tabular-nums">
+        {Astro.props.work.period}
+      </p>
+    </div>
+  </div>
+</div>

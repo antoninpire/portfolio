@@ -1,0 +1,18 @@
+---
+import projects from "../data/projects.json";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<div class="mt-10">
+  <h3 class="text-sm text-neutral-400 mb-2">projects</h3>
+  {
+    projects.map((project, index) => (
+      <div>
+        <ProjectCard
+          project={project}
+          separator={index !== projects.length - 1}
+        />
+      </div>
+    ))
+  }
+</div>

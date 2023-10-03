@@ -1,0 +1,49 @@
+---
+import GithubIcon from "./icons/GithubIcon.astro";
+interface Props {
+  project: {
+    name: string;
+    description: string;
+    url: string;
+  };
+  separator: boolean;
+}
+---
+
+<a
+  href={Astro.props.project.url}
+  target="_blank"
+  rel="noreferrer"
+  class="flex gap-x-4 px-4 -ml-4 pt-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
+>
+  <div
+    class="bg-neutral-100 dark:bg-neutral-800 w-9 h-9 rounded-[10px] mt-[2px] shadow flex justify-center items-center"
+  >
+    <p class="text-sm text-neutral-400 font-semibold">
+      {Astro.props.project.name[0].toUpperCase() + Astro.props.project.name[1]}
+    </p>
+  </div>
+  <div
+    class:list={[
+      "flex flex-col text-sm pb-4 text-neutral-700 dark:text-neutral-300 group-hover:border-transparent w-full",
+      {
+        "border-b border-b-neutral-100 dark:border-b-neutral-900":
+          Astro.props.separator,
+      },
+    ]}
+  >
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <p>{Astro.props.project.name}</p>
+      </div>
+      {
+        Astro.props.project.url.includes("github.com") ? (
+          <div title="Public">
+            <GithubIcon size={14} />
+          </div>
+        ) : null
+      }
+    </div>
+    <p class="text-neutral-500">{Astro.props.project.description}</p>
+  </div>
+</a>

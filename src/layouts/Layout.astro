@@ -1,0 +1,92 @@
+---
+import "@fontsource/inter";
+import { Tooltips } from "astro-tooltips";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const author = "Antonin Pire";
+const description = "The professional portfolio of Antonin Pire";
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- General Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    {
+      // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
+      // include google-site-verification tag in the heading
+      // Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
+      googleSiteVerification && (
+        <meta
+          name="google-site-verification"
+          content={googleSiteVerification}
+        />
+      )
+    }
+
+    <Tooltips interactive={false} delay={[15, 100]} placement="top" />
+    <script
+      defer
+      data-token="fzjwqfvmgy6l6n64l5fiebor"
+      src="https://analytics.antonin.dev/static/script.js"></script>
+  </head>
+  <body class="bg-white dark:bg-neutral-950">
+    <slot />
+    <style is:global>
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      ::-webkit-scrollbar {
+        @apply w-1;
+        @apply h-1;
+      }
+
+      ::-webkit-scrollbar-track {
+        @apply !bg-neutral-700;
+      }
+      ::-webkit-scrollbar-thumb {
+        @apply rounded-sm !bg-neutral-400/30;
+      }
+
+      html {
+        scrollbar-color: hsl(215.4 16.3% 56.9% / 0.3);
+      }
+
+      /* Firefox */
+      /* https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color#browser_compatibility */
+      html {
+        scrollbar-color: rgba(0, 0, 0, 0.2) rgba(255, 255, 255, 0.05);
+      }
+      html.dark {
+        scrollbar-color: rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </body>
+</html>

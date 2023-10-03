@@ -1,0 +1,17 @@
+---
+import technologies from "../data/technologies.json";
+import TechnologyCard from "./TechnologyCard.astro";
+---
+
+<div class="mt-10">
+  <h3 class="text-sm text-neutral-400 mb-2">technologies</h3>
+  {
+    technologies.map((technology, index) => (
+      <TechnologyCard
+        technologies={technology.technologies}
+        label={technology.label}
+        separator={index !== technologies.length - 1}
+      />
+    ))
+  }
+</div>

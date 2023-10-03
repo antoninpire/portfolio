@@ -1,0 +1,16 @@
+---
+interface Props {
+  to: string;
+  title: string;
+}
+---
+
+<a
+  href={Astro.props.to}
+  target="_blank"
+  rel="noreferrer"
+  class="p-3 rounded-[13px] hover:bg-neutral-50 dark:hover:bg-neutral-900 text-neutral-400"
+  title={Astro.props.title}
+>
+  <slot />
+</a>
