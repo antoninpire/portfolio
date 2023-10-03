@@ -1,6 +1,8 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import Me from "../assets/me.png";
 ---
 
-<Image src={Me} alt="Antonin" class="rounded-full" width="100" height="100" />
+<div class="w-[100px] h-[100px] overflow-hidden rounded-full">
+  <Image src={Me} alt="Antonin" quality={100} />
+</div>
