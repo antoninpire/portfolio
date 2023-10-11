@@ -32,6 +32,11 @@
   {
     "name": "Studio",
     "description": "An alternative to phpmyadmin with better UX",
-    "url": "https://github.com/antoninpire/studio"
+    "url": "https://studio.antonin.dev"
+  },
+  {
+    "name": "Url Shortener",
+    "description": "A fairly simple url shortener",
+    "url": "https://github.com/antoninpire/url-shortener"
   }
 ]
