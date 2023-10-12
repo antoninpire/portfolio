@@ -1,37 +1,45 @@
 [
   {
     "name": "Sinta",
-    "description": "A mobile app made to build romantic relationships",
-    "url": "https://sinta.app"
+    "description": "A mobile app to help build romantic relationships",
+    "url": "https://sinta.app",
+    "imgPath": "/images/sinta_logo.png",
+    "regularUse": true
   },
   {
     "name": "Shelf",
     "description": "Your all-in-one shelf of medias",
-    "url": "https://shelf.antonin.dev"
+    "url": "https://shelf.antonin.dev",
+    "regularUse": false
   },
   {
     "name": "Tako",
     "description": "A minimalistic markdown note-taking app",
-    "url": "https://github.com/antoninpire/tako"
+    "url": "https://github.com/antoninpire/tako",
+    "regularUse": true
   },
   {
     "name": "Analytics",
     "description": "A free alternative to analytics services",
-    "url": "https://github.com/antoninpire/analytics"
+    "url": "https://github.com/antoninpire/analytics",
+    "regularUse": true
   },
   {
     "name": "REST",
     "description": "A minimalistic and fast api platform",
-    "url": "https://github.com/antoninpire/rest"
+    "url": "https://github.com/antoninpire/rest",
+    "regularUse": false
   },
   {
     "name": "Kanban",
-    "description": "A simpler alternative to Trello",
-    "url": "https://github.com/antoninpire/kanban"
+    "description": "A simpler alternative to bloated Trello-like apps",
+    "url": "https://github.com/antoninpire/kanban",
+    "regularUse": true
   },
   {
     "name": "Studio",
-    "description": "An alternative to phpmyadmin with better UX",
-    "url": "https://github.com/antoninpire/studio"
+    "description": "An alternative to DB browsers with better UX",
+    "url": "https://github.com/antoninpire/studio",
+    "regularUse": true
   }
 ]

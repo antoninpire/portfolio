@@ -1,10 +1,15 @@
 ---
+import { Image } from "astro:assets";
 import GithubIcon from "./icons/GithubIcon.astro";
+import WaveIcon from "./icons/WaveIcon.astro";
+
 interface Props {
   project: {
     name: string;
     description: string;
     url: string;
+    imgPath?: string;
+    regularUse: boolean;
   };
   separator: boolean;
 }
@@ -16,12 +21,25 @@ interface Props {
   rel="noreferrer"
   class="flex gap-x-4 px-4 -ml-4 pt-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
 >
-  <div
-    class="bg-neutral-100 dark:bg-neutral-800 w-9 h-9 rounded-[10px] mt-[2px] shadow flex justify-center items-center"
-  >
-    <p class="text-sm text-neutral-400 font-semibold">
-      {Astro.props.project.name[0].toUpperCase() + Astro.props.project.name[1]}
-    </p>
+  <div class="w-9 h-9 rounded-[10px] mt-[2px] shadow overflow-hidden">
+    {
+      Astro.props.project.imgPath ? (
+        <Image
+          src={Astro.props.project.imgPath}
+          alt={Astro.props.project.name}
+          class="rounded-[10px] w-full h-full object-contain"
+          width="36"
+          height="36"
+        />
+      ) : (
+        <div class="bg-neutral-100 dark:bg-neutral-800 h-full flex justifiy-center items-center">
+          <p class="text-sm text-neutral-400 font-semibold w-full text-center">
+            {Astro.props.project.name[0].toUpperCase() +
+              Astro.props.project.name[1]}
+          </p>
+        </div>
+      )
+    }
   </div>
   <div
     class:list={[
@@ -36,13 +54,22 @@ interface Props {
       <div class="flex items-center gap-2">
         <p>{Astro.props.project.name}</p>
       </div>
-      {
-        Astro.props.project.url.includes("github.com") ? (
-          <div title="Public">
-            <GithubIcon size={14} />
-          </div>
-        ) : null
-      }
+      <div class="flex items-center gap-2">
+        {
+          Astro.props.project.regularUse ? (
+            <div title="I use it regularly">
+              <WaveIcon />
+            </div>
+          ) : null
+        }
+        {
+          Astro.props.project.url.includes("github.com") ? (
+            <div title="Public">
+              <GithubIcon size={14} />
+            </div>
+          ) : null
+        }
+      </div>
     </div>
     <p class="text-neutral-500">{Astro.props.project.description}</p>
   </div>
