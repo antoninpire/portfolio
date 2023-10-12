@@ -39,7 +39,13 @@
   {
     "name": "Studio",
     "description": "An alternative to DB browsers with better UX",
-    "url": "https://github.com/antoninpire/studio",
+    "url": "https://studio.antonin.dev",
     "regularUse": true
+  },
+  {
+    "name": "Url Shortener",
+    "description": "A fairly simple url shortener",
+    "url": "https://github.com/antoninpire/url-shortener",
+    "regularUse": false
   }
 ]
