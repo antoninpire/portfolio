@@ -7,9 +7,9 @@
     "regularUse": true
   },
   {
-    "name": "Shelf",
-    "description": "Your all-in-one shelf of medias",
-    "url": "https://shelf.antonin.dev",
+    "name": "Blackshelf",
+    "description": "Your all-in-one media shelf",
+    "url": "https://blackshelf.app",
     "regularUse": false
   },
   {
@@ -41,11 +41,5 @@
     "description": "An alternative to DB browsers with better UX",
     "url": "https://studio.antonin.dev",
     "regularUse": true
-  },
-  {
-    "name": "Url Shortener",
-    "description": "A fairly simple url shortener",
-    "url": "https://github.com/antoninpire/url-shortener",
-    "regularUse": false
   }
 ]
