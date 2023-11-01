@@ -10,7 +10,9 @@
     "name": "Blackshelf",
     "description": "Your all-in-one media shelf",
     "url": "https://blackshelf.app",
-    "regularUse": false
+    "imgPath": "/images/blackshelf_logo.png",
+    "regularUse": true,
+    "activeDevelopment": true
   },
   {
     "name": "Tako",

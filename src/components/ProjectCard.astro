@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import ConstructionIcon from "./icons/ConstructionIcon.astro";
 import GithubIcon from "./icons/GithubIcon.astro";
 import WaveIcon from "./icons/WaveIcon.astro";
 
@@ -10,6 +11,7 @@ interface Props {
     url: string;
     imgPath?: string;
     regularUse: boolean;
+    activeDevelopment?: boolean;
   };
   separator: boolean;
 }
@@ -55,6 +57,16 @@ interface Props {
         <p>{Astro.props.project.name}</p>
       </div>
       <div class="flex items-center gap-2">
+        {
+          Astro.props.project.activeDevelopment ? (
+            <div
+              title="Active development"
+              class="animate-pulse text-yellow-300"
+            >
+              <ConstructionIcon />
+            </div>
+          ) : null
+        }
         {
           Astro.props.project.regularUse ? (
             <div title="I use it regularly">
