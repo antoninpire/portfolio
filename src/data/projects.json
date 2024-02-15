@@ -40,8 +40,8 @@
   },
   {
     "name": "Studio",
-    "description": "An alternative to DB browsers with better UX",
-    "url": "https://studio.antonin.dev",
+    "description": "An alternative to DB viewers with better UX",
+    "url": "https://std.antonin.dev",
     "regularUse": true
   }
 ]
