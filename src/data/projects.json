@@ -39,9 +39,9 @@
     "regularUse": true
   },
   {
-    "name": "Studio",
+    "name": "Zenith",
     "description": "An alternative to DB viewers with better UX",
-    "url": "https://std.antonin.dev",
+    "url": "https://zenith.antonin.dev",
     "regularUse": true
   }
 ]
